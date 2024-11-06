@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appril</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'appril-purple': '#220036',
+                        'appril-yellow': '#FFE600',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+  
+</head>
+<body class="bg-appril-purple text-white min-h-screen flex flex-col font-montserrat">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+        <header x-data="{ isOpen: false }" class="py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl sm:text-4xl font-bold">Appril</div>
+                <button @click="isOpen = !isOpen" class="sm:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <nav class="hidden sm:flex items-center space-x-8 font-bold text-xl">
+                    <a href="#" class="hover:text-appril-yellow">Home</a>
+                    <a href="#" class="hover:text-appril-yellow">About us</a>
+                    <a href="#" class="hover:text-appril-yellow">Works</a>
+                    <a href="#" class="text-appril-yellow">Services</a>
+                    <button class="bg-appril-yellow text-appril-purple px-6 py-2 rounded-md font-bold text-lg hover:bg-opacity-90">Get in touch</button>
+                </nav>
+            </div>
+            <nav x-show="isOpen" 
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform -translate-y-2"
+                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                 x-transition:leave-end="opacity-0 transform -translate-y-2"
+                 class="sm:hidden mt-4 flex flex-col items-center space-y-4 font-bold text-xl">
+                <a href="#" class="hover:text-appril-yellow">Home</a>
+                <a href="#" class="hover:text-appril-yellow">About us</a>
+                <a href="#" class="hover:text-appril-yellow">Works</a>
+                <a href="#" class="text-appril-yellow">Services</a>
+                <button class="bg-appril-yellow text-appril-purple px-6 py-2 rounded-md font-bold text-lg hover:bg-opacity-90 w-full max-w-xs">Get in touch</button>
+            </nav>
+        </header>
+        <!-- ANİMATİON START -->
+
+        <div class="outer-headings">
+            <div class="yazi">We Just Work For</div>
+            <div class="inner-headings">
+                <div class="slide">
+            <span  data-color="#8a2be2" style="  color: rgb(201, 176, 38)">LIVESCORE</span>
+            <span  data-color="green" style="color: blue;">BETTING</span>
+            <span  data-color="#6495ed"style="color: brown;">UI/UX DESIGN</span>
+            <span  data-color="#ff00ff" style="color: rgb(213, 196, 255);">BRANDING</span>
+            <span data-color="#9370d8" style="color: rgb(52, 12, 16);">GRAPHIC</span>
+            <span  data-color="black" style="color: rgb(105, 24, 24);">ANIMATION</span>
+                </div>
+            </div>
+        </div>
+
+        <main class="mt-16 sm:mt-32 mb-16 sm:mb-32">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16 sm:mb-24 text-center leading-tight">HOW WE CAN HELP YOU</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 lg:gap-24 font-bold">
+                <ul class="space-y-4 sm:space-y-6 text-lg sm:text-xl">
+                    <li>• Branding</li>
+                    <li>• Logo design</li>
+                    <li>• Visual Identity</li>
+                    <li>• Design Systems</li>
+                </ul>
+                <ul class="space-y-4 sm:space-y-6 text-lg sm:text-xl">
+                    <li>• Digital Product Design</li>
+                    <li>• Print Design</li>
+                    <li>• Graphic Design</li>
+                    <li>• Motion Animation</li>
+                    <li>• Advertisement</li>
+                    <li>• Packaging design</li>
+                </ul>
+                <ul class="space-y-4 sm:space-y-6 text-lg sm:text-xl">
+                    <li>• Team Management</li>
+                    <li>• Working method</li>
+                    <li>• Social Media Support</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer class="mt-auto pb-6 sm:pb-8">
+        <div class="container mx-auto px-4 sm:px-16">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end text-xs sm:text-sm pt-6 sm:pt-8">
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 lg:space-x-16 mb-4 sm:mb-0">
+                    <div>
+                        <p class="font-bold mb-1">Address</p>
+                        <p>Şefik Bey Sokak No: 3 Kadıköy/İstanbul</p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-1">E-mail</p>
+                        <p>hello@appril.digital</p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-1">Social Media</p>
+                        <p>/linkedin /instagram /x</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <button class="border border-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-xl sm:text-2xl">←</button>
+                    <button class="border border-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-xl sm:text-2xl">→</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
